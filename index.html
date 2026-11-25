@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Azhar | 3D Creative Developer & Web Engineer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- 3D Three.js WebGL Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#hero" class="brand-logo">
+        Azhar<span class="logo-accent">.3D/&gt;</span>
+      </a>
+      
+      <div class="nav-links-wrap" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-social-icons">
+          <a href="https://github.com/Kamboh987" target="_blank" rel="noopener noreferrer" class="nav-social-link" title="GitHub - Kamboh987" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammadazhar2025/" target="_blank" rel="noopener noreferrer" class="nav-social-link" title="LinkedIn - Muhammad Azhar" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+        <a href="#contact" class="btn btn-outline nav-btn">Let's Talk</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for Freelance & New Opportunities</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Muhammad Azhar</span><br>
+          Crafting 3D & Modern Web Experiences
+        </h1>
+        
+        <p class="hero-description">
+          Creative Developer & Designer specializing in building visually immersive, high-performance web applications with Three.js, interactive 3D graphics, and modern web architectures.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-glass">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Get In Touch</span>
+          </a>
+          <a href="https://wa.me/923132098404" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Me</span>
+          </a>
+        </div>
+
+        <div class="hero-stats-banner">
+          <div class="stat-item">
+            <h3 class="stat-number">45+</h3>
+            <p class="stat-label">Projects Completed</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h3 class="stat-number">100%</h3>
+            <p class="stat-label">Client Satisfaction</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <h3 class="stat-number">3+</h3>
+            <p class="stat-label">Years Experience</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Interactive 3D Holographic Stage -->
+      <div class="hero-3d-stage">
+        <!-- Floating 3D Badges -->
+        <div class="holo-card-floating holo-badge-1">
+          <i class="fa-solid fa-cube"></i>
+          <span>Three.js 3D Core</span>
+        </div>
+
+        <div class="holo-card-floating holo-badge-2">
+          <i class="fa-solid fa-bolt"></i>
+          <span>17+ Live Projects</span>
+        </div>
+
+        <div class="holo-card-floating holo-badge-3">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Interactive WebGL</span>
+        </div>
+
+        <div class="holo-control-hint">
+          <i class="fa-solid fa-hand-pointer"></i>
+          <span>Click & Drag to Spin 3D Hologram</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creative Infinite Marquee Ticker -->
+    <div class="marquee-strip">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item"><i class="fa-solid fa-cloud-rain"></i> 3D CYBER RAIN FX</span>
+        <span class="marquee-item"><i class="fa-solid fa-cube"></i> THREE.JS 3D GRAPHICS</span>
+        <span class="marquee-item"><i class="fa-solid fa-bolt"></i> GSAP KINETIC MOTION</span>
+        <span class="marquee-item"><i class="fa-solid fa-gauge-high"></i> ULTRA FAST 60 FPS</span>
+        <span class="marquee-item"><i class="fa-solid fa-mobile-screen"></i> 100% RESPONSIVE DESIGN</span>
+        <span class="marquee-item"><i class="fa-solid fa-cloud-rain"></i> 3D CYBER RAIN FX</span>
+        <span class="marquee-item"><i class="fa-solid fa-cube"></i> THREE.JS 3D GRAPHICS</span>
+        <span class="marquee-item"><i class="fa-solid fa-bolt"></i> GSAP KINETIC MOTION</span>
+        <span class="marquee-item"><i class="fa-solid fa-gauge-high"></i> ULTRA FAST 60 FPS</span>
+        <span class="marquee-item"><i class="fa-solid fa-mobile-screen"></i> 100% RESPONSIVE DESIGN</span>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section container">
+      <div class="section-header text-center">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Turning Creative Visions Into <span class="gradient-text">Reality</span></h2>
+        <p class="section-subtitle">Bridging the gap between cutting-edge 3D graphics and responsive web performance.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-panel">
+          <div class="card-icon"><i class="fa-solid fa-cube"></i></div>
+          <h3>3D & Interactive Graphics</h3>
+          <p>Building immersive WebGL experiences using Three.js, GLSL shaders, camera parallax, and real-time lighting that captivates audiences.</p>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Clean Architecture</h3>
+          <p>Clean, modular, and maintainable code adhering to industry best practices, ensuring ultra-fast load times and seamless responsiveness.</p>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>UI/UX & Micro-interactions</h3>
+          <p>Crafting sleek glassmorphic interfaces, kinetic typography, and fluid micro-interactions tailored for maximum user engagement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section container">
+      <div class="section-header text-center">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">My Tech <span class="gradient-text">Stack & Toolkit</span></h2>
+      </div>
+
+      <div class="skills-container">
+        <!-- 3D & Creative -->
+        <div class="skill-category glass-panel">
+          <h3 class="category-title"><i class="fa-solid fa-vr-cardboard"></i> 3D & Creative</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fa-solid fa-shapes"></i> Three.js</span>
+            <span class="skill-tag"><i class="fa-solid fa-vector-square"></i> WebGL</span>
+            <span class="skill-tag"><i class="fa-solid fa-bolt"></i> GSAP</span>
+            <span class="skill-tag"><i class="fa-solid fa-fire"></i> Blender Basics</span>
+            <span class="skill-tag"><i class="fa-solid fa-palette"></i> Canvas 2D</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category glass-panel">
+          <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Frontend Engineering</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+            <span class="skill-tag"><i class="fa-brands fa-react"></i> React.js</span>
+            <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5 / Modern CSS</span>
+            <span class="skill-tag"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+            <span class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+          </div>
+        </div>
+
+        <!-- Tools & Workflow -->
+        <div class="skill-category glass-panel">
+          <h3 class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Workflow & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            <span class="skill-tag"><i class="fa-solid fa-box-open"></i> Vite & Webpack</span>
+            <span class="skill-tag"><i class="fa-brands fa-figma"></i> Figma to Code</span>
+            <span class="skill-tag"><i class="fa-solid fa-cloud-arrow-up"></i> Vercel / Netlify</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section container">
+      <div class="section-header text-center">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Selected <span class="gradient-text">Live Landing Pages</span></h2>
+        <p class="section-subtitle">Verified live client landing pages with real-time conversion architectures.</p>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" id="projectFilters">
+          <button class="filter-btn active" data-filter="all">All (17)</button>
+          <button class="filter-btn" data-filter="home-services">Home & Trades (4)</button>
+          <button class="filter-btn" data-filter="commercial">Commercial & Retail (6)</button>
+          <button class="filter-btn" data-filter="consulting">Corporate & Healthcare (6)</button>
+          <button class="filter-btn" data-filter="automotive">Automotive (1)</button>
+        </div>
+
+        <!-- Real-time Search Bar -->
+        <div class="project-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="projectSearch" placeholder="Search by name, trade or keyword (e.g. tile, pest, masonry)...">
+        </div>
+      </div>
+
+      <!-- Projects Grid dynamically populated from projects-data.js -->
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section container">
+      <div class="contact-card glass-panel">
+        <div class="contact-content">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="contact-title">Have a project in mind? <br><span class="gradient-text">Let's build something epic.</span></h2>
+          <p class="contact-desc">
+            Feel free to reach out for freelance projects, full-time opportunities, or just to talk about creative 3D web development.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span class="item-label">Email Me</span>
+                <a href="mailto:azharkamboh987@gmail.com" class="item-value">azharkamboh987@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div>
+                <span class="item-label">WhatsApp / Phone</span>
+                <a href="https://wa.me/923132098404" target="_blank" rel="noopener noreferrer" class="item-value">+92 313 2098404</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span class="item-label">Location</span>
+                <span class="item-value">Available Worldwide (Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/Kamboh987" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub - Kamboh987">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammadazhar2025/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn - Muhammad Azhar">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/923132098404" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp" title="WhatsApp Chat">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); window.location.href='mailto:azharkamboh987@gmail.com?subject=Project%20Inquiry&body=' + encodeURIComponent(document.getElementById('message').value);">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Client Name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="client@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="projectType">Project Type</label>
+            <select id="projectType">
+              <option value="3d-website">3D Website / Portfolio</option>
+              <option value="web-app">Full Web Application</option>
+              <option value="ecommerce">E-Commerce Store</option>
+              <option value="other">Other Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Muhammad Azhar. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Kamboh987" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub - Kamboh987"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammadazhar2025/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn - Muhammad Azhar"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/923132098404" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <a href="#hero" class="back-to-top">
+        <span>Back to Top</span>
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Project Data and Logic -->
+  <script src="projects-data.js"></script>
+  <script src="three-scene.js"></script>
+  <script src="main.js"></script>
+  <!-- Creative GSAP Animations & Magnetic FX -->
+  <script src="gsap-fx.js"></script>
+</body>
+</html>
