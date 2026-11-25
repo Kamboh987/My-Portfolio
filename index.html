@@ -304,7 +304,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); window.location.href='mailto:azharkamboh987@gmail.com?subject=Project%20Inquiry&body=' + encodeURIComponent(document.getElementById('message').value);">
+       <form class="contact-form" id="contactForm" onsubmit="sendInquiry(event)">
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" placeholder="Client Name" required>
@@ -364,6 +364,17 @@
   <!-- Project Data and Logic -->
   <script src="projects-data.js"></script>
   <script src="three-scene.js"></script>
+  <script>
+function sendInquiry(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  const subject = encodeURIComponent('Project Inquiry from ' + name);
+  const body = encodeURIComponent('Name: ' + name + '\n' + 'Email: ' + email + '\n\n' + msg);
+  window.open('https://mail.google.com/mail/?view=cm&fs=1&to=azharkamboh987@gmail.com&su=' + subject + '&body=' + body, '_blank');
+}
+</script>
   <script src="main.js"></script>
   <!-- Creative GSAP Animations & Magnetic FX -->
   <script src="gsap-fx.js"></script>
